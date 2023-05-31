@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- sample03 -->
+<!--scope (범위) : prototype (각각만듬), request, session, singleton  -->
+	<bean id="messageBean" class="sample03.MessageBeanKo" scope=""></bean>
+
+<!--smaple04  -->
+<bean id="CalcAdd" class="sample04.CalcAdd" scope=""></bean>
+<bean id="CalcMul" class="sample04.CalcMul" scope=""></bean>
+
+<!--sample05  -->
+<bean id="sungJukImpl" class="sample05.SungJuklmpl" scope=""></bean> 
+
+
+
+
+
+
+</beans> <!--겟인스턴스 없어도 싱글톤  -->

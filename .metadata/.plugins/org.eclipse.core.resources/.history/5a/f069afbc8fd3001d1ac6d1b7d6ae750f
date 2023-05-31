@@ -1,0 +1,8 @@
+package sample01;
+
+public interface MessageBean {
+	public void SayHello();
+	public void SayHello(String friut, int cost);
+	public void SayHello(String fruit, int cost, int qty);
+
+}

@@ -1,0 +1,8 @@
+package sample04;
+
+public class CalcAdd {
+	
+	public CalcAdd () {
+		System.out.println("25 + 36 = " + (25 + 36));
+	}
+}

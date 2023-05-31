@@ -1,0 +1,21 @@
+package user.service;
+
+import java.util.List;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+@Setter
+public class UserSelectService implements userService {
+	private UserDAO userDAO;
+	
+	@Override
+	public void execute() {
+		System.out.println();
+		List<UserDTO> list = userDAO.getUserList();
+		for(UserDTO userDTO: list) {
+			System.out.printf("%s\t%s\t%s", userDTO.getName(), userDTO.getId(), userDTO.getPwd());
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package sample05;
+
+public class FileOutPutter implements OutPutter {
+	private String filePath, fileName;
+
+	@Override
+	public void output() {
+		
+	}
+}

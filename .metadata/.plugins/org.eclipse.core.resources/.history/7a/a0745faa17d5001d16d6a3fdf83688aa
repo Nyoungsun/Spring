@@ -1,0 +1,17 @@
+package user.service;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+@Setter
+public class UserSelectService implements userService {
+	private UserDTO userDTO;
+	private UserDAO userDAO;
+	
+	@Override
+	public void execute() {
+		userDAO.select();
+	}
+
+}

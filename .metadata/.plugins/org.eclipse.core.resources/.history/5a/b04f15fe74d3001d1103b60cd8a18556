@@ -1,0 +1,8 @@
+package sample04;
+
+public class CalcAdd {
+	
+	public void ClacAdd () {
+		System.out.println(a + b);
+	}
+}

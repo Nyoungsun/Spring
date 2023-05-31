@@ -1,0 +1,8 @@
+package sample01;
+
+public interface MessageBean {
+	public void SayHello();
+	public void SayHello(Srtring friut, int coast);
+	public void SayHello();
+
+}

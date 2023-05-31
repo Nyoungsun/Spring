@@ -1,0 +1,47 @@
+package user.main;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpring {
+	public void menu() {
+		Scanner scanner = new Scanner(System.in);
+		
+		while (true) {
+			System.out.println("===== MENU =====");
+			System.out.println(" 1. 입력");
+			System.out.println(" 2. 출력");
+			System.out.println(" 3. 수정");
+			System.out.println(" 4. 삭제");
+			System.out.println(" 5. 종료");
+			System.out.println("================");
+			System.out.print("SELECT NUMBER: ");
+			int num = scanner.nextInt();
+			System.out.println();
+
+			if (num == 5) {
+				break;
+			} else if (num == 1) {
+			
+			} else if (num == 2) {
+				
+			} else if (num == 3) {
+				
+			} else if (num == 4) {
+				
+			} else {
+				System.out.println("다시 입력하세요");
+				System.out.println();
+				continue;
+			}
+		} // while
+
+	}
+
+	public static void main(String[] args) {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
+		
+	}
+}

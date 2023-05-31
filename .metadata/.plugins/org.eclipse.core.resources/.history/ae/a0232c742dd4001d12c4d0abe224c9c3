@@ -1,0 +1,21 @@
+package spring.conf;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import sample01.MessageBeanImpl;
+
+@Configuration // applicationContext.xml과 같은 역할을 함 → Bean 생성
+public class SpringConfiguration {
+	
+	// sample01
+	@Bean
+	public MessageBeanImpl messageBeanImpl() {
+		return new MessageBeanImpl("사과");
+	}
+}
+
+/*
+ 메소드에서 return되는 값을 Bean으로 생성
+ 메소드의 이름은 반드시 Bean의 id명과 같아야함
+ */

@@ -1,0 +1,54 @@
+package user.service;
+
+import java.util.Scanner;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+@Setter
+public class UserUpdateService implements userService {
+	private UserDTO userDTO;
+	private UserDAO userDAO;
+
+	@Override
+	public void execute() {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println();
+		System.out.print("수정하고자 하는 ID 입력: "); // ID - PK
+		String id = scanner.next();
+		
+		userDTO = userDAO.getUser(id);
+
+		int toggle = 0;
+			if (id.equals(userDTO.getId())) {
+				toggle = 1;
+
+				System.out.println("이름\tID\tPWD");
+				System.out.println(userDTO);
+				System.out.println();
+
+				System.out.print("변경할 이름:");
+				String name = scanner.next();
+				System.out.print("변경할 PWD:");
+				String pwd = scanner.next();
+
+				// 저장
+				userDTO.setName(name);
+				userDTO.setPwd(pwd);
+				
+				userDAO.update(userDTO);
+				
+				System.out.println();
+				System.out.println("수정 완료");
+				System.out.println();
+			}
+				
+		if (toggle == 0) {
+			System.out.println("정보 없음");
+		}
+		
+	}
+
+}

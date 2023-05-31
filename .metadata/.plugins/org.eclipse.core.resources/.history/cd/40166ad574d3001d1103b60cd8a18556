@@ -1,0 +1,9 @@
+package sample04;
+
+public class CalcAdd {
+	
+	private void Add(int a, int b) {
+		// TODO Auto-generated method stub
+
+	}
+}

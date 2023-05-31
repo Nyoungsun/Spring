@@ -1,0 +1,19 @@
+package sample05;
+
+public class SungJukImpl implements SungJuk {
+	
+	private 
+
+	@Override
+	public void calc() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package user.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+
+@Setter
+public class UserDAOImpl implements UserDAO{
+	private JdbcTemplate jdbcTemplate = null;
+	
+	@Override
+	public void write(UserDTO userDTO) {
+		String sql = "insert into usertable values(?,?,?)";
+		jdbcTemplate.update("");
+	}
+
+}

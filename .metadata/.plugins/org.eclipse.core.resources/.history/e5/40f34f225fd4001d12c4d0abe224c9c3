@@ -1,0 +1,11 @@
+package sample04;
+
+import java.util.Scanner;
+
+public class SungJukDelete implements SungJuk{
+
+	@Override
+	public void execute() {
+		Scanner scanner = new Scanner(System.in);
+	}
+}

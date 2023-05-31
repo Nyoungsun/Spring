@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- id: 객체명, class: 클래스명(패키지까지) -->
+	<!-- MessageBean messageBean = new MessageBeanKo(); -->
+	<!-- 스프링은 디폴트로 싱글톤 패턴 -->
+	<!-- scope: prototype, request, session, singleton -->
+	
+	<context:component-scan base-package="sample01"/>  
+	<context:component-scan base-package="sample03"/>
+	<context:component-scan base-package="spring.conf"/>
+	
+<!-- 	<bean id="messageBeanImpl" class="sample01.MessageBeanImpl"> -->
+<!-- 		<constructor-arg> -->
+<!-- 		<value>사과</value> -->
+<!-- 		</constructor-arg>	 -->
+		
+<!-- 		<property name="cost"> -->
+<!-- 		<value>5000</value> -->
+<!-- 		</property>  -->
+		
+<!-- 		<property name="qty" value="3"/> -->
+<!-- 	</bean> -->
+</beans>

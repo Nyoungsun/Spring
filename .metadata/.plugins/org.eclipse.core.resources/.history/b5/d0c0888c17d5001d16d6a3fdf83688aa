@@ -1,0 +1,22 @@
+package user.service;
+
+import lombok.Setter;
+import sample04.SungJukDTO2;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+@Setter
+public class UserSelectService implements userService {
+	private UserDTO userDTO;
+	private UserDAO userDAO;
+	
+	@Override
+	public void execute() {
+		System.out.println();
+		System.out.println("이름\tID\tPWD");
+		for(SungJukDTO2 sungJukDTO2: list) {
+			System.out.println(sungJukDTO2);
+		
+	}
+
+}

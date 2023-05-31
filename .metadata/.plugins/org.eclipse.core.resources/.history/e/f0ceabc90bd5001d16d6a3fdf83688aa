@@ -1,0 +1,11 @@
+package user.main;
+
+public class HelloSpring {
+	public void menu() {
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

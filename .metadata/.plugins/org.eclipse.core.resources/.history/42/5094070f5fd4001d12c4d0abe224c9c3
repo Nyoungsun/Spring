@@ -1,0 +1,9 @@
+package sample04;
+
+public class SungJukDelete implements SungJuk{
+
+	@Override
+	public void execute() {
+		
+	}
+}

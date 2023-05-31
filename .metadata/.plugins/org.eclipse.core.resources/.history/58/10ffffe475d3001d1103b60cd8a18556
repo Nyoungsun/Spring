@@ -1,0 +1,9 @@
+package sample04;
+
+public class CalcMul {
+	
+	public CalcMul() {
+		System.out.println("25 * 36 = " + (25 * 36));
+	}
+
+}

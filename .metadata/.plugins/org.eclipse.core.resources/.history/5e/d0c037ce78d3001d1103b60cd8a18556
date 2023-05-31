@@ -1,0 +1,21 @@
+package sample04;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import sample03.MessageBean;
+
+public class HelloSpring {
+	public static void main(String[] args) {
+		//ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/applicationContext.xml");
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Calc calculate  = (Calc) applicationContext.getBean("CalcAdd");
+		calculate.calculate(25, 36);
+		
+		Calc calculate2  = (Calc) applicationContext.getBean("CalcMul");
+		calculate2.calculate(25, 36);
+
+	}
+}
