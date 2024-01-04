@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="userSQL">  
+ 
+ 	<insert id="write" parameterType="userDTO">   
+ 		insert into usertable values(#{name} , #{id} , #{pwd})
+ 	</insert>
+
+ 	 <select id ="getUserList" parameterType="java.util.Map" resultType="userDTO">
+ 		<![CDATA[
+		select * from
+		(select rownum rn, A.* from
+		(select * from usertable) A)
+		where rn >= #{start} and rn <= #{end}
+		]]>
+ 	</select>
+ 	
+ 	<select id="getUser" parameterType="String" resultType="userDTO">
+ 		select * from usertable where id=#{id}
+ 	</select>
+ 	
+ 	<update id="update" parameterType="userDTO">
+ 		update usertable set name=#{name}, pwd=#{pwd} where id=#{id}
+ 	</update>
+ 
+ 	<delete id="delete" parameterType="java.util.Map">
+  		delete from usertable where id=#{id} and pwd=#{pwd}
+   </delete>  
+   
+   <select id="totalArticle" resultType="int">
+ 		select count(*) from usertable
+ 	</select>
+ 	
+ 	<insert id="upload" parameterType="user.bean.UserImageDTO">   
+ 		insert into image values(seq_img.nextval, #{imgName} , #{imgContent}, #{image})
+ 	</insert>
+ 	
+ 	<select id="getImgList" resultType="user.bean.UserImageDTO">
+ 		select * from image order by seq desc
+ 	</select>
+ </mapper>

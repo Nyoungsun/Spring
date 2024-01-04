@@ -1,0 +1,14 @@
+create table image (
+	seq number PRIMARY key,
+	imgName varchar2(250) not null,
+	imgContent varchar2(4000),
+	image varchar2(250)
+);
+
+CREATE SEQUENCE seq_img
+       INCREMENT BY 1
+       START WITH 1
+       MINVALUE 1
+       MAXVALUE 9999
+       NOCYCLE
+       NOCACHE;
